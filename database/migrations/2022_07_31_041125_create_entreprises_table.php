@@ -13,8 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('role_table_utilisateur', function (Blueprint $table) {
+        Schema::create('entreprises', function (Blueprint $table) {
             $table->id();
+            $table->string('nom');
+            $table->string('structure');
+            $table->string('adresse');
             $table->timestamps();
         });
     }
@@ -26,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('role_table_utilisateur');
+        Schema::dropIfExists('entreprises');
     }
 };
