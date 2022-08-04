@@ -9,9 +9,8 @@ use App\Models\Utilisateur;
 class Utilisateur extends Model
 {
     use HasFactory;
-    protected $fillable = ['nom','prenom', 'adresse','poste','email','mot_de_pass','telephone'];
-     public function roles(){
-        return $this->belongsToMany('App\Role');
+    protected $fillable = ["nom","prenom","adresse","email","password","photo_profile","departement","role"];
+    
     }
-}
+
 
