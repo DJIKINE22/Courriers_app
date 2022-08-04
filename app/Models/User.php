@@ -1,11 +1,6 @@
 <?php
 
-  
-
 namespace App\Models;
-
-  
-
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -18,7 +13,6 @@ use Laravel\Sanctum\HasApiTokens;
 
 use Illuminate\Database\Eloquent\Casts\Attribute;
 
-  
 
 class User extends Authenticatable
 
@@ -47,6 +41,7 @@ class User extends Authenticatable
         'password',
 
         'type',
+        
         'departement'
 
     ];
@@ -114,5 +109,11 @@ class User extends Authenticatable
         );
 
     }
+
+
+    public function departements()
+{
+    return $this->belongsTo('App\Models\departements');
+}
 
 }
