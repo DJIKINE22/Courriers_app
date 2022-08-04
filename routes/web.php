@@ -37,6 +37,7 @@ Route::get('/', function () {
 
 });
 
+
   
 
 Auth::routes();
@@ -101,4 +102,11 @@ Route::middleware(['auth', 'user-access:manager'])->group(function () {
 
 });
 
- 
+
+Route::resource('utilisateurs','UtilisateurController');
+Route::get('/admin', function () {
+    return view('admin.dashboard');
+});
+Route::get('/courrierentrant', function () {
+    return view('admin.courrierentrant');
+});
