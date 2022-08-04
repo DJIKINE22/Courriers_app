@@ -37,6 +37,7 @@ Route::get('/', function () {
     return view('welcome');
 
 });
+<<<<<<< HEAD
 
   
 
@@ -103,3 +104,9 @@ Route::middleware(['auth', 'user-access:manager'])->group(function () {
 });
 
  
+=======
+Route::resource('utilisateurs','UtilisateurController');
+Route::get('/admin', function () {
+    return view('admin.dashboard');
+});
+>>>>>>> a86e1380bc10e04620387b110ff2f986c083cf97
