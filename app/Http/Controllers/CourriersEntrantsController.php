@@ -15,9 +15,9 @@ class UsersController extends Controller
      */
     public function index()
     {
-        $Courriers_Entrants = courriers_entrants::all();
+        $oumou = Courriers_Entrants::all();
 
-        return view('indexentrant', compact('courriers_entrants'));
+        return view('indexentrant', compact('oumou'));
     }
 
     /**

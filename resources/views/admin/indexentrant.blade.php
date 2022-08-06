@@ -34,18 +34,17 @@ extends('admin.master')
             </td>
     </thead>
     <tbody>
-    @foreach($courriers_entrants as $courrierentrant)
+    @foreach($oumou as $oumouDagnogo)
         <tr>
-            <td>{{$Courriers_Entrants->id}}</td>
-            <td>{{$Courriers_Entrants->ref}}</td>
-            <td>{{$Courriers_Entrants->objet}}</td>
-            <td>{{$Courriers_Entrants->objet}}</td>
-            <td>{{$Courriers_Entrants->status}}</td>
-            <td>{{$Courriers_Entrants->expediteur}}</td>
-            <td>{{$Courriers_Entrants->pieces_jointe}}</td>
-            <td>{{$Courriers_Entrants->date_recept}}</td>
-            <td>{{$Courriers_Entrants->libelle}}</td>
-            <td>{{$Courriers_Entrants->user}}</td>
+            <td>{{$oumouDagnogo->id}}</td>
+            <td>{{$oumouDagnogo->ref}}</td>
+            <td>{{$oumouDagnogo->objet}}</td>
+            <td>{{$oumouDagnogo->status}}</td>
+            <td>{{$oumouDagnogo->expediteur}}</td>
+            <td>{{$oumouDagnogo->pieces_jointe}}</td>
+            <td>{{$oumouDagnogo->date_recept}}</td>
+            <td>{{$oumouDagnogo->libelle}}</td>
+            <td>{{$oumouDagnogo->user}}</td>
             <td><a href="" class="btn btn-primary">Modifier</a></td>
             <td><a href="" class="btn btn-info">Detail</a></td>
         </tr>
