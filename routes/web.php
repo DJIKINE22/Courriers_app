@@ -107,6 +107,6 @@ Route::resource('utilisateurs','UtilisateurController');
 Route::get('/admin', function () {
     return view('admin.dashboard');
 });
-Route::get('/courrierentrant', function () {
-    return view('admin.courrierentrant');
+Route::get('/indexentrant', function () {
+    return view('admin.indexentrant');
 });
