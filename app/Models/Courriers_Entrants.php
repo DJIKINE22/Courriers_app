@@ -13,7 +13,7 @@ class Courriers_Entrants extends Model
     
     public function User()
     {
-        return $this->belongsTo(User::class, 'user');
+        return $this->belongsTo(User::class, 'user', 'id');
     }
     
 }

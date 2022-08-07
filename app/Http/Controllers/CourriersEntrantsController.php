@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Models\Courriers_Entrants;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class CourriersEntrantsController extends Controller
 {
@@ -15,7 +17,18 @@ class CourriersEntrantsController extends Controller
      */
     public function index()
     {
-        $oumou = Courriers_Entrants::all();
+        // $oumou = Courriers_Entrants::all();
+          //$messages = Message::latest()->get();
+    $currentUser = Auth::user()->id;
+
+    $oumou = Courriers_Entrants::
+        whereRaw('Courriers__Entrants.id = (select max(id) from `Courriers__Entrants` id where user = '.$currentUser.')' )
+        ->orderBy('id', 'desc')
+        ->get(); 
+
+
+        // $oumou = Courriers_Entrants::Where('id=Auth::user()->id');
+        // $oumou = Courriers_Entrants::Where('User', Auth::id());
 
         return view('admin/indexentrant', compact('oumou'));
     }

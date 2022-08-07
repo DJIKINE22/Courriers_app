@@ -46,6 +46,10 @@ class User extends Authenticatable
 
     ];
 
+    public function Courriers_Entrants()
+    {
+        return $this->hasMany(Courriers_Entrants::class, 'user','id');
+    }
   
 
     /**

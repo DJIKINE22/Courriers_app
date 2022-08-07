@@ -4,8 +4,7 @@
 
 namespace App\Http\Controllers;
 
- 
-
+use App\Models\Courriers_Entrants;
 use Illuminate\Http\Request;
 
   
@@ -69,6 +68,7 @@ class HomeController extends Controller
     {
 
         return view('adminHome');
+        
 
     }
 
@@ -89,6 +89,9 @@ class HomeController extends Controller
     {
 
         return view('managerHome');
+        // $oumou = Courriers_Entrants::Where('id=Auth::user()->id');
+
+        // return view('admin/indexentrant', compact('oumou'));
 
     }
 

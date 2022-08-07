@@ -1,4 +1,6 @@
+@extends('layouts.app')
 
+@section('content')
 
 <div class="table-responsive">
   <table class="table">
@@ -15,12 +17,12 @@
         <th scope="col">Action</th>
       </tr>
       <tr>
-            <td>
+            <!-- <td>
               <div class="custom-control custom-checkbox">
                   <input type="checkbox" class="custom-control-input" id="customCheck1" checked>
                   <label class="custom-control-label" for="customCheck1">1</label>
               </div>
-            </td>
+            </td> -->
     </thead>
     <tbody>
     @foreach($oumou as $oumouDagnogo)
@@ -31,12 +33,12 @@
                   <label class="custom-control-label" for="customCheck1"></label>
               </div>
             </td>
-            <td>{{$oumouDagnogo->id}}</td>
+            <!-- <td>{{$oumouDagnogo->id}}</td> -->
             <td>{{$oumouDagnogo->ref}}</td>
             <td>{{$oumouDagnogo->objet}}</td>
-            <td>{{$oumouDagnogo->status}}</td>
-            <td>{{$oumouDagnogo->expediteur}}</td>
-            <td>{{$oumouDagnogo->pieces_jointe}}</td>
+            <td>{{$oumouDagnogo->statut}}</td>
+            <td>{{$oumouDagnogo->expeditaire}}</td>
+            <td>{{$oumouDagnogo->piece_jointe}}</td>
             <td>{{$oumouDagnogo->date_recept}}</td>
             <td>{{$oumouDagnogo->libelle}}</td>
             <td>{{$oumouDagnogo->user}}</td>
@@ -47,5 +49,7 @@
     </tbody>
   </table>
 </div>
-</body>
-</html>
+{{ Auth::user()->name }}
+
+
+@endsection
