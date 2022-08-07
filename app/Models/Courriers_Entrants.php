@@ -9,7 +9,11 @@ class Courriers_Entrants extends Model
 {
     use HasFactory;
     protected $fillable = ['ref','objet', 'status','expediteur','pieces_jointe','date_recept','libelle','user'];
-     public function courriers_entrants(){
-        return view('admin.indexentrant');
+    
+    
+    public function User()
+    {
+        return $this->belongsTo(User::class, 'user');
     }
+    
 }
