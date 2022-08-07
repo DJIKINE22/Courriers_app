@@ -534,7 +534,6 @@ class ComposerStaticInita8c941f6986a5b743645ef1d14207aab
         'App\\Http\\Controllers\\Auth\\VerificationController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/VerificationController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\CourriersArchivesController' => __DIR__ . '/../..' . '/app/Http/Controllers/CourriersArchivesController.php',
-        'App\\Http\\Controllers\\CourriersEntrantsController' => __DIR__ . '/../..' . '/app/Http/Controllers/CourriersEntrantsController.php',
         'App\\Http\\Controllers\\CourriersSortantsController' => __DIR__ . '/../..' . '/app/Http/Controllers/CourriersSortantsController.php',
         'App\\Http\\Controllers\\DepartementsController' => __DIR__ . '/../..' . '/app/Http/Controllers/DepartementsController.php',
         'App\\Http\\Controllers\\EntreprisesController' => __DIR__ . '/../..' . '/app/Http/Controllers/EntreprisesController.php',
