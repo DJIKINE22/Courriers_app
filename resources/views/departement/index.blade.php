@@ -2,14 +2,15 @@
 
 @section('content')
 
+<h2 style="text-align:center;">Liste des départements</h2>
 
-<!-- Ajout departement -->
+    <!-- retour vers l'accueil -->
+    <a class="btn btn-danger" href="admin/dashboard">Retour</a><br><br>
 
-    <form action=" {{ route('departement.register') }} " method="POST">
+      <!-- Ajout departement -->
+    <form action=" {{ route('departement.register') }} " method="POST" style="margin-bottom: 10% ;">
             @csrf
 
-           <!-- retour vers l'accueil -->
-      <a class="btn btn-danger" href="dashboard">Retour</a>
            <div class="row">
                       <div class="col-md-1"></div>
                       <div class="col-md-1 float-right" >
@@ -32,7 +33,7 @@
 <div class="table-responsive">
   <table class="table">
     <thead>
-      <tr>
+      <tr style="background-color:#1D71B8;">
         <th scope="col">N° </th>
         <th scope="col">Nom du Département</th>
         
