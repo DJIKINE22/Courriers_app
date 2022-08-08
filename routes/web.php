@@ -113,3 +113,11 @@ Route::get('/admin', function () {
 
 
 Route::get('/admin/indexentrant', [App\Http\Controllers\CourriersEntrantsController::class, 'index'])->name('courrierentrant');
+
+
+Route::get('/entreprise/create', [App\Http\Controllers\EntreprisesController::class, 'index'])->name('entreprise.Regist');
+Route::post('/entreprise', [App\Http\Controllers\EntreprisesController::class, 'store'])->name('entreprise.register');
+
+Route::get('/departement/index', [App\Http\Controllers\DepartementsController::class, 'index'])->name('departement.index');
+
+Route::post('/departement/index', [App\Http\Controllers\DepartementsController::class, 'store'])->name('departement.register');

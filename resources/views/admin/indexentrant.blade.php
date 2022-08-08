@@ -49,7 +49,6 @@
     </tbody>
   </table>
 </div>
-{{ Auth::user()->name }}
 
 
 @endsection

@@ -1,27 +1,11 @@
-<?php
-
-namespace App\Http\Controllers;
-
-use App\Http\Controllers\Controller;
-use App\Models\departements;
-use Illuminate\Http\Request;
-
-class DepartementsController extends Controller
-{
-    public function index()
-    { 
-        $departement = departements::all();
-    return view('/departement.index', compact('departement'));
-    }   
-
-    /**
+ /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
      */
     public function create()
     {
-        return view('/departement.index');
+        return view('/departement.create');
     }
        
     /**
@@ -35,10 +19,9 @@ class DepartementsController extends Controller
         $departement  = $request->validate([
             
             "nom"=>'required',
-            "entreprise"=>'required',
+            "entreprise"=>'Required',
         ]);
     
         $departement = departements::create($departement);
-        return redirect('departement/index');
+        return redirect('admin/home');
     }
-}

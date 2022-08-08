@@ -9,9 +9,16 @@ class entreprises extends Model
 {
     use HasFactory;
 
+    protected $fillable=[
+        'nom',
+        'structure',
+        'adresse'
+    ];
+
+
 public function departements()
 {
-    return $this->hasMany('App\Models\departements');
+    return $this->hasMany('App\Models\departements', 'id', 'entreprise');
 }
 
 }
